@@ -261,6 +261,61 @@ h1 {
   text-transform: uppercase;
 }
 
+
+.product-showcase {
+  position: relative;
+}
+
+.product-showcase-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 390px);
+  gap: clamp(3rem, 10vw, 8rem);
+  align-items: center;
+}
+
+.product-showcase-copy {
+  max-width: 650px;
+}
+
+.product-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem 1.2rem;
+  margin-top: 2rem;
+  color: var(--faint);
+  font-family: ui-monospace, "SFMono-Regular", Menlo, monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.app-screen {
+  width: min(100%, 370px);
+  margin: 0;
+  justify-self: end;
+}
+
+.app-screen img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  background: #000;
+  box-shadow: 0 28px 70px rgba(0, 0, 0, 0.34);
+}
+
+.app-screen figcaption {
+  margin-top: 0.85rem;
+  color: var(--faint);
+  font-size: 0.78rem;
+}
+
+.app-screen cite {
+  font-style: normal;
+  color: var(--muted);
+}
+
 .privacy-callout {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(260px, 0.7fr);
@@ -365,7 +420,11 @@ h1 {
   .site-nav { gap: 0.9rem; font-size: 0.82rem; }
   .wordmark { font-size: 0.7rem; }
   .hero { min-height: auto; padding: 6rem 0 5rem; }
-  .section-head, .privacy-callout { grid-template-columns: 1fr; }
+  .section-head, .privacy-callout, .product-showcase-grid { grid-template-columns: 1fr; }
+  .app-screen {
+    width: min(100%, 340px);
+    justify-self: center;
+  }
   .step { grid-template-columns: 42px minmax(0, 1fr); }
   .launch-panel { text-align: left; }
   .launch-panel h2, .launch-panel p { margin-inline: 0; }
